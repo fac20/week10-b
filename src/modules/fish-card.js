@@ -14,7 +14,7 @@ const FishCard = ({
     return <h3>...Loading</h3>;
   }
   return (
-    <article>
+    <article className="card" style={{backgroundImage: `url(${image})` }}>
       <h2>
         {Genus} {Species}
       </h2>
@@ -23,24 +23,24 @@ const FishCard = ({
         <legend>Stats</legend>
         <ul>
           <li>
-            <span role="img" aria-label="">
-              ⚠️
-            </span>{" "}
+            {/* <span role="img" aria-label="">
+              
+            </span>{" "} */}
             Danger: {Dangerous}{" "}
-            <span role="img" aria-label="">
+            {/* <span role="img" aria-label="">
               ⚠️
-            </span>{" "}
+            </span>{" "} */}
           </li>
           <li>Vulnerability: {Vulnerability}</li>
           <li>Length: {Length} cm</li>
           <li>
-            <span role="img" aria-label="">
+            {/* <span role="img" aria-label="">
               ⚡
-            </span>{" "}
+            </span>{" "} */}
             Lightning magic: {Electrogenic}
-            <span role="img" aria-label="">
+            {/* <span role="img" aria-label="">
               ⚡
-            </span>
+            </span> */}
           </li>
         </ul>
       </fieldset>
