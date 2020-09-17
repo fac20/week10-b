@@ -32,7 +32,7 @@ const FishCard = ({
             </span>{" "}
           </li>
           <li>Vulnerability: {Vulnerability}</li>
-          <li>Length: {Length} mm</li>
+          <li>Length: {Length} cm</li>
           <li>
             <span role="img" aria-label="">
               ⚡

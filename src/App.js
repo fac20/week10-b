@@ -8,10 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header"></header>
-      <body className="App-body">
-        {page ? <LandingPage setPage={setPage} /> : <FightPage />}
-      </body>
+      {page ? <LandingPage setPage={setPage} /> : <FightPage />}
     </div>
   );
 }

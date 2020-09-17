@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../logo.png";
 // import FishPage from "./fight-page";
-import { loadFish } from "../App";
 
 const LandingPage = ({ setPage }) => {
   return (

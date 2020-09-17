@@ -4,7 +4,7 @@ import { getRandomFishData } from "./fetch-helper";
 
 const FightPage = () => {
   const [fishData, setFishData] = React.useState(null);
-  const [opponentFishData, setOpponentFishData] = React.useState(null);
+  // const [opponentFishData, setOpponentFishData] = React.useState(null);   --> Accept button
 
   // button activated effect - rejects button
   React.useEffect(() => {
