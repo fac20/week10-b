@@ -3,20 +3,17 @@ import React from "react";
 const FishCard = ({
   Genus, //
   Species, //
-  //   Fresh,
-  //   Saltwater,
-  //   BodyShapeI,
   Vulnerability, // stats
   Length, // stats
   Dangerous, // stats
   Electrogenic, // stats
-  Description, //-
+  Comments, //-
   image, //-
 }) => {
   return (
     <article>
       <h2>
-        {Genus}; {Species}
+        {Genus} {Species}
       </h2>
       <img src={image} alt="fish pic" />
       <fieldset>
@@ -29,7 +26,7 @@ const FishCard = ({
         </ul>
       </fieldset>
       <h3>Description:</h3>
-      <p>{Description}</p>
+      <p>{Comments}</p>
     </article>
   );
 };

@@ -25,10 +25,12 @@ const getRandomFishData = () => {
     66825,
     7199,
   ];
-  const randomNum = Math.floor(Math.random() * speciesCodeArr.length);
-  const randFishNo = speciesCodeArr[randomNum];
+  const randomArrayIndex = Math.floor(Math.random() * speciesCodeArr.length);
+  const randSpeciesNo = speciesCodeArr[randomArrayIndex];
   //  fetch fish data for species number random generated no.
-  return fetchHelper(`species/${randFishNo}`);
+  return fetchHelper(`species/${randSpeciesNo}`).then((res) => {
+    return res.data[0];
+  });
 };
 
 export { fetchHelper, getRandomFishData };
