@@ -10,6 +10,9 @@ const FishCard = ({
   Comments, //-
   image, //-
 }) => {
+  if (!Genus) {
+    return <h3>...Loading</h3>;
+  }
   return (
     <article>
       <h2>
@@ -19,10 +22,26 @@ const FishCard = ({
       <fieldset>
         <legend>Stats</legend>
         <ul>
-          <ol>Danger: {Dangerous}</ol>
-          <ol>Vulnerability: {Vulnerability}</ol>
-          <ol>Length: {Length}</ol>
-          <ol>Lightning magic: {Electrogenic}</ol>
+          <li>
+            <span role="img" aria-label="">
+              ⚠️
+            </span>{" "}
+            Danger: {Dangerous}{" "}
+            <span role="img" aria-label="">
+              ⚠️
+            </span>{" "}
+          </li>
+          <li>Vulnerability: {Vulnerability}</li>
+          <li>Length: {Length} mm</li>
+          <li>
+            <span role="img" aria-label="">
+              ⚡
+            </span>{" "}
+            Lightning magic: {Electrogenic}
+            <span role="img" aria-label="">
+              ⚡
+            </span>
+          </li>
         </ul>
       </fieldset>
       <h3>Description:</h3>
