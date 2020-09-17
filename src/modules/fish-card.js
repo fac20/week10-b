@@ -1,6 +1,6 @@
 import React from "react";
 
-const fishCard = ({
+const FishCard = ({
   Genus, //
   Species, //
   //   Fresh,
@@ -18,14 +18,14 @@ const fishCard = ({
       <h2>
         {Genus}; {Species}
       </h2>
-      <image>{image}</image>
+      <img src={image} alt="fish pic" />
       <fieldset>
         <legend>Stats</legend>
         <ul>
           <ol>Danger: {Dangerous}</ol>
           <ol>Vulnerability: {Vulnerability}</ol>
           <ol>Length: {Length}</ol>
-          <ol>Electrogenic: {Electrogenic}</ol>
+          <ol>Lightning magic: {Electrogenic}</ol>
         </ul>
       </fieldset>
       <h3>Description:</h3>
@@ -33,3 +33,5 @@ const fishCard = ({
     </article>
   );
 };
+
+export default FishCard;
