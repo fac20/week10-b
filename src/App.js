@@ -1,33 +1,19 @@
 import React from "react";
 import "./App.css";
-import FishCard from "./modules/fish-card";
-import { getRandomFishData } from "./modules/fetch-helper";
 import LandingPage from "./modules/landing-page";
+import FightPage from "./modules/fight-page";
 
 function App() {
-  const [fishData, setFishData] = React.useState(null);
-  // opponentFish data
-
-  // button activated effect - rejects button
-  React.useEffect(() => {
-    getRandomFishData().then((data) => {
-      setFishData(data);
-    });
-  }, []);
+  const [page, setPage] = React.useState(true);
 
   return (
-    // return landing page on first load - logo and randomizer button
     <div className="App">
       <header className="App-header"></header>
-      {/* title - some kind of fish pun */}
       <body className="App-body">
-        <LandingPage />
-        {/* <FishCard {...fishData} /> */}
-        {/* accept or reject buttons */}
+        {page ? <LandingPage setPage={setPage} /> : <FightPage />}
       </body>
     </div>
   );
 }
-//landing page function
-//fight page function
+
 export default App;
