@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import FishCard from "./modules/fish-card";
 import { getRandomFishData } from "./modules/fetch-helper";
+import LandingPage from "./modules/landing-page";
 
 function App() {
   const [fishData, setFishData] = React.useState(null);
@@ -16,12 +17,12 @@ function App() {
 
   return (
     // return landing page on first load - logo and randomizer button
-    // <img src={logo} className="App-logo" alt="logo" />
     <div className="App">
       <header className="App-header"></header>
       {/* title - some kind of fish pun */}
       <body className="App-body">
-        <FishCard {...fishData} />
+        <LandingPage />
+        {/* <FishCard {...fishData} /> */}
         {/* accept or reject buttons */}
       </body>
     </div>
