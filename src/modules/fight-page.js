@@ -14,10 +14,10 @@ const FightPage = () => {
   }, []);
   return (
     <>
-      <h1>Being weighed in the scales</h1>
+      <h1 className="fight__title">Being weighed in the scales</h1>
       <FishCard {...fishData} />
-      <button>I'm hooked - Accept</button>
-      <button
+      <button className="accept__btn">I'm hooked - Accept</button>
+      <button className="reject__btn"
         onClick={() => {
           getRandomFishData().then((data) => {
             setFishData(data);

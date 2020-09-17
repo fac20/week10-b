@@ -1,18 +1,286 @@
 * {
-  box-sizing: border-boc;
+  box-sizing: border-box;
 }
 
-main {
-  max-width: 50ch;
+body {
+  font-family: "Press Start 2P", cursive, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ------- Title ------- */
+.home__title {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ------- Home logo ------- */
+
+.App-logo {
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1.5rem;
+  width: 35%;
+  display: block;
 }
 
-label,
-input,
-button {
-  font: inherit;
-  color: inherit;
+/* ------- Home Accept Button ------- */
+
+.home__btn {
+  background: hsl(183, 82%, 42%);
   display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  padding: 20px;
+  font-family: inherit;
+  color: hsl(0, 0%, 100%);
+  box-shadow: inset -4px -4px 0px 0px hsl(183, 93%, 17%);
+}
+
+.home__btn:hover,
+.home__btn:focus {
+  background: hsl(183, 86%, 36%);
+  box-shadow: inset -6px -8px 0px 0px hsl(183, 93%, 17%);
+}
+
+.home__btn:active {
+  box-shadow: inset 4px 4px 0px 0px hsl(183, 93%, 17%);
+}
+
+.home__btn:before {
+  top: -6px;
+  left: 0;
+  border-top: 6px hsl(0, 0%, 0%) solid;
+  border-bottom: 6px hsl(0, 0%, 0%) solid;
+}
+
+.home__btn:after {
+  left: -6px;
+  top: 0;
+  border-left: 6px hsl(0, 0%, 0%) solid;
+  border-right: 6px hsl(0, 0%, 0%) solid;
+}
+
+/* ------- Fight Page Card ------- */
+
+.fight__title {
+  text-align: center;
+}
+
+img {
+  width: 75%;
+  border-radius: 8px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.card {
+  filter: drop-shadow(25px 25px 10px grey);
+  margin-top: 40px;
+  margin-left: 450px;
+  text-align: center;
+  width: 40%;
+  height: 30%;
+  background-size: cover;
+  background-position: top center;
+  background-color: #3e96b1;
+  border-radius: 8px;
+  box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6), 3px 3px 3px 0 rgba(#c995c3, 0.6), 0 0 6px 2px rgba(#d6c147, 0.6),
+    0 35px 25px -15px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  animation: holoCard 10s ease infinite;
+}
+
+card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-image: linear-gradient(115deg,
+      transparent 0%,
+      rgb(0, 231, 255) 30%,
+      rgb(255, 0, 231) 70%,
+      transparent 100%);
+  mix-blend-mode: color-dodge;
+  opacity: 0.2;
+  z-index: 1;
+  animation: holoGradient 10s ease infinite;
+}
+
+.card:after {
+  mix-blend-mode: color-dodge;
+  opacity: 1;
+  z-index: 2;
+  animation: holoSparkle 10s ease infinite;
+}
+
+.card.active:before {
+  opacity: 1;
+  animation: none;
+  transition: none;
+  background-image: linear-gradient(115deg,
+      transparent 0%,
+      transparent 25%,
+      rgba(0, 231, 255, 0.7) 45%,
+      rgba(255, 0, 231, 0.7) 55%,
+      transparent 70%,
+      transparent 100%);
+}
+
+.card.active:before,
+.card.active:after {
+  animation: none;
+}
+
+@keyframes holoSparkle {
+
+  0%,
+  5% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes holoGradient {
+
+  0%,
+  100% {
+    opacity: 0;
+    background-position: 0% 0%;
+  }
+
+  8% {
+    opacity: 0;
+  }
+
+  10% {
+    background-position: 0% 0%;
+  }
+
+  19% {
+    background-position: 100% 100%;
+    opacity: 0.5;
+  }
+
+  35% {
+    background-position: 100% 100%;
+  }
+
+  55% {
+    background-position: 0% 0%;
+    opacity: 0.3;
+  }
+
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes holoCard {
+
+  0%,
+  10% {
+    transform: rotate3d(0, 0, 0, -20deg);
+  }
+
+  20% {
+    transform: rotate3d(1, 1, 0.2, 30deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 0, -20deg);
+  }
+}
+
+
+/* ------- Fight Page Accept Button ------- */
+
+.accept__btn {
+  margin-top: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  background: hsl(85, 58%, 53%);
+  display: block;
+  font-size: 15px;
+  padding: 20px;
+  font-family: inherit;
+  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: inset -4px -4px 0px 0px hsl(106, 56%, 41%);
+}
+
+.accept__btn:hover,
+.accept__btn:focus {
+  background: #76c442;
+  box-shadow: inset -6px -6px 0px 0px hsl(106, 56%, 41%);
+}
+
+.accept__btn:active {
+  box-shadow: inset 4px 4px 0px 0px hsl(106, 56%, 41%);
+}
+
+.accept__btn:before {
+  top: -6px;
+  left: 0;
+  border-top: 6px hsl(0, 0%, 0%) solid;
+  border-bottom: 6px hsl(0, 0%, 0%) solid;
+}
+
+.accept__btn:after {
+  left: -6px;
+  top: 0;
+  border-left: 6px hsl(0, 0%, 0%) solid;
+  border-right: 6px hsl(0, 0%, 0%) solid;
+}
+
+/* ------- Fight Page Reject Button ------- */
+
+.reject__btn {
+  background: hsl(10, 75%, 62%);
+  display: block;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 15px;
+  padding: 20px;
+  font-family: inherit;
+  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: inset -4px -4px 0px 0px hsl(359, 63%, 34%);
+}
+
+.reject__btn:hover,
+.reject__btn:focus {
+  background: hsl(4, 65%, 49%);
+  box-shadow: inset -6px -6px 0px 0px hsl(359, 63%, 34%);
+}
+
+.reject__btn:active {
+  box-shadow: inset 4px 4px 0px 0px hsl(359, 63%, 34%);
+}
+
+.reject__btn:before {
+  top: -6px;
+  left: 0;
+  border-top: 6px hsl(0, 0%, 0%) solid;
+  border-bottom: 6px hsl(0, 0%, 0%) solid;
+}
+
+.reject__btn:after {
+  left: -6px;
+  top: 0;
+  border-left: 6px hsl(0, 0%, 0%) solid;
+  border-right: 6px hsl(0, 0%, 0%) solid;
 }
