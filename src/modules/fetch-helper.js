@@ -11,4 +11,26 @@ const checkResponse = (res) => {
   return res.json();
 };
 
-export { fetchHelper, checkResponse };
+const getRandomFishData = () => {
+  // generate random number between 1 and 34342
+  const speciesCodeArr = [
+    2,
+    57917,
+    7198,
+    5205,
+    25417,
+    22822,
+    22963,
+    1353,
+    66825,
+    7199,
+  ];
+  const randomArrayIndex = Math.floor(Math.random() * speciesCodeArr.length);
+  const randSpeciesNo = speciesCodeArr[randomArrayIndex];
+  //  fetch fish data for species number random generated no.
+  return fetchHelper(`species/${randSpeciesNo}`).then((res) => {
+    return res.data[0];
+  });
+};
+
+export { fetchHelper, getRandomFishData };
