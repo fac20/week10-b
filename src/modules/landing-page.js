@@ -1,12 +1,12 @@
 import React from "react";
 import logo from "../logo.png";
-import gif from "../title.png";
+import title from "../title.png";
 // import FishPage from "./fight-page";
 
 const LandingPage = ({ setPage }) => {
   return (
     <>
-      <img src={gif} alt="title" aria-label=""/>
+      <img src={title} alt="title" aria-label=""/>
       <img
         onClick={() => setPage(false)}
         src={logo}
