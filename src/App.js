@@ -2,10 +2,13 @@ import React from "react";
 import "./App.css";
 import FishCard from "./modules/fish-card";
 import { getRandomFishData } from "./modules/fetch-helper";
+import LandingPage from "./modules/landing-page";
 
 function App() {
   const [fishData, setFishData] = React.useState(null);
-  console.log(fishData);
+  // opponentFish data
+
+  // button activated effect - rejects button
   React.useEffect(() => {
     getRandomFishData().then((data) => {
       setFishData(data);
@@ -13,13 +16,18 @@ function App() {
   }, []);
 
   return (
+    // return landing page on first load - logo and randomizer button
     <div className="App">
       <header className="App-header"></header>
+      {/* title - some kind of fish pun */}
       <body className="App-body">
-        <FishCard {...fishData} />
+        <LandingPage />
+        {/* <FishCard {...fishData} /> */}
+        {/* accept or reject buttons */}
       </body>
     </div>
   );
 }
-
+//landing page function
+//fight page function
 export default App;
