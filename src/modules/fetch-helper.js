@@ -1,7 +1,7 @@
 const API_BASE = "https://fishbase.ropensci.org/";
 
 const fetchHelper = (url) => {
-  fetch(`${API_BASE}${url}`).then(checkResponse);
+  return fetch(`${API_BASE}${url}`).then(checkResponse);
 };
 
 const checkResponse = (res) => {
