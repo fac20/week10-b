@@ -7,10 +7,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ------- Title ------- */
+/* ------- Home Title ------- */
+
 .home__title {
   display: block;
   margin: 0 auto;
+  width: 30%;
 }
 
 /* ------- Home logo ------- */
@@ -26,7 +28,7 @@ body {
 /* ------- Home Accept Button ------- */
 
 .home__btn {
-  background: hsl(183, 82%, 42%);
+  background: hsl(183, 90%, 37%);
   display: block;
   margin-top: 50px;
   margin-left: auto;
@@ -62,11 +64,16 @@ body {
   border-right: 6px hsl(0, 0%, 0%) solid;
 }
 
-/* ------- Fight Page Card ------- */
+/* ------- Fight Title ------- */
 
 .fight__title {
   text-align: center;
+  font-size: 28px;
+  font-style: italic;
+  color: hsl(183, 57%, 40%);
 }
+
+/* ------- Fight Page Card ------- */
 
 img {
   width: 75%;
