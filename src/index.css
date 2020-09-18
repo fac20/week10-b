@@ -307,3 +307,8 @@ card:before,
   border-left: 6px hsl(0, 0%, 0%) solid;
   border-right: 6px hsl(0, 0%, 0%) solid;
 }
+
+/*----- Hidden opponent card -----*/
+.hidden {
+  display: none;
+}

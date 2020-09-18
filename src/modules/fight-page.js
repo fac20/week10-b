@@ -4,8 +4,9 @@ import { getRandomFishData } from "./fetch-helper";
 
 const FightPage = () => {
   const [fishData, setFishData] = React.useState(null);
-  // const [opponentFishData, setOpponentFishData] = React.useState(null);   --> Accept button
+  const [opponentFishData, setOpponentFishData] = React.useState(null);
   const [count, setCount] = React.useState(0);
+  const [hidden, setHidden] = React.useState(true);
 
   // button activated effect - rejects button
   React.useEffect(() => {
@@ -13,11 +14,21 @@ const FightPage = () => {
       setFishData(data);
     });
   }, [count]);
+  // button activated effect - accept button
+  React.useEffect(() => {
+    getRandomFishData().then((data) => {
+      setOpponentFishData(data);
+    });
+  }, []);
+
   return (
     <>
       <h1 className="fight__title">Fishcious choice, player.</h1>
       <FishCard {...fishData} />
-      <button className="accept__btn">I'm hooked - Accept.</button>
+      <FishCard hidden={hidden} {...opponentFishData} />
+      <button className="accept__btn" onClick={() => setHidden(!hidden)}>
+        I'm hooked - Accept.
+      </button>
       <button
         className="reject__btn"
         onClick={() => {

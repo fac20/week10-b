@@ -9,12 +9,13 @@ const FishCard = ({
   Electrogenic,
   Comments,
   image,
+  hidden,
 }) => {
   if (!Genus) {
     return <h3 className="loading">...Loading</h3>;
   }
   return (
-    <article className="card">
+    <article className={hidden ? "hidden card" : "card"}>
       <h2>
         {Genus} {Species}
       </h2>
