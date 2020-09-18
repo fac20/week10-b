@@ -5,7 +5,14 @@ import title from "../title.png";
 const LandingPage = ({ setPage }) => {
   return (
     <>
-      <img src={title} alt="title" aria-label="" className="home__title  " />
+      <img
+        src={title}
+        alt="title"
+        role="heading"
+        aria-level="1"
+        aria-label="Arch Nemo-sis"
+        className="home__title  "
+      />
       <img
         onClick={() => setPage(false)}
         src={logo}
