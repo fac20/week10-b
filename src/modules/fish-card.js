@@ -1,21 +1,20 @@
 import React from "react";
 
 const FishCard = ({
-  Genus, //
-  Species, //
-  Vulnerability, // stats
-  Length, // stats
-  Dangerous, // stats
-  Electrogenic, // stats
-  Comments, //-
-  image, //-
+  Genus,
+  Species,
+  Vulnerability,
+  Length,
+  Dangerous,
+  Electrogenic,
+  Comments,
+  image,
 }) => {
   if (!Genus) {
     return <h3>...Loading</h3>;
   }
   return (
     <article className="card">
-      {/* style={{backgroundImage: `url(${image})` }}> */}
       <h2>
         {Genus} {Species}
       </h2>
@@ -24,23 +23,30 @@ const FishCard = ({
         <legend>Stats</legend>
         <dl>
           <li className="stats">
-            {/* <span role="img" aria-label="">
-            </span>{" "} */}
-            Danger: {Dangerous}{" "}
-            {/* <span role="img" aria-label="">
-              ⚠️
-            </span>{" "} */}
+            <span role="img" aria-label="">
+              🔥
+            </span>
+            <span role="img" aria-label=""></span> Danger: {Dangerous}
           </li>
-          <li className="stats">Vulnerability: {Vulnerability}</li>
-          <li className="stats">Length: {Length} cm</li>
           <li className="stats">
-            {/* <span role="img" aria-label="">
+            {" "}
+            <span role="img" aria-label="">
+              🥀
+            </span>{" "}
+            Vulnerability: {Vulnerability}
+          </li>
+          <li className="stats">
+            {" "}
+            <span role="img" aria-label="">
+              📏
+            </span>{" "}
+            Length: {Length} cm
+          </li>
+          <li className="stats">
+            <span role="img" aria-label="">
               ⚡
-            </span>{" "} */}
+            </span>{" "}
             Lightning magic: {Electrogenic}
-            {/* <span role="img" aria-label="">
-              ⚡
-            </span> */}
           </li>
         </dl>
       </fieldset>
