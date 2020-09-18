@@ -75,6 +75,11 @@ body {
 
 /* ------- Fight Page Card ------- */
 
+.loading {
+  text-align: center;
+  animation: jump 6.5s ease 0s;
+}
+
 img {
   width: 75%;
   border-radius: 8px;
