@@ -83,20 +83,30 @@ img {
   margin-bottom: 10px;
 }
 
+.stats {
+  text-align: left;
+  padding-bottom: 0.5rem;
+}
+
+.card p {
+  text-align: left;
+}
+
 .card {
   filter: drop-shadow(25px 25px 10px grey);
-  margin-top: 40px;
-  margin-left: 450px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 2rem;
   text-align: center;
-  width: 40%;
-  height: 30%;
+  max-width: 30rem;
   background-size: cover;
   background-position: top center;
-  background-color: #3e96b1;
+  background-color: hsl(194, 48%, 93%);
   border-radius: 8px;
-  box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6), 3px 3px 3px 0 rgba(#c995c3, 0.6), 0 0 6px 2px rgba(#d6c147, 0.6),
+  box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6),
+    3px 3px 3px 0 rgba(#c995c3, 0.6), 0 0 6px 2px rgba(#d6c147, 0.6),
     0 35px 25px -15px rgba(0, 0, 0, 0.5);
-  display: inline-block;
   animation: holoCard 10s ease infinite;
 }
 
@@ -108,11 +118,13 @@ card:before,
   right: 0;
   bottom: 0;
   top: 0;
-  background-image: linear-gradient(115deg,
-      transparent 0%,
-      rgb(0, 231, 255) 30%,
-      rgb(255, 0, 231) 70%,
-      transparent 100%);
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgb(0, 231, 255) 30%,
+    rgb(255, 0, 231) 70%,
+    transparent 100%
+  );
   mix-blend-mode: color-dodge;
   opacity: 0.2;
   z-index: 1;
@@ -130,13 +142,15 @@ card:before,
   opacity: 1;
   animation: none;
   transition: none;
-  background-image: linear-gradient(115deg,
-      transparent 0%,
-      transparent 25%,
-      rgba(0, 231, 255, 0.7) 45%,
-      rgba(255, 0, 231, 0.7) 55%,
-      transparent 70%,
-      transparent 100%);
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 25%,
+    rgba(0, 231, 255, 0.7) 45%,
+    rgba(255, 0, 231, 0.7) 55%,
+    transparent 70%,
+    transparent 100%
+  );
 }
 
 .card.active:before,
@@ -145,7 +159,6 @@ card:before,
 }
 
 @keyframes holoSparkle {
-
   0%,
   5% {
     opacity: 0.1;
@@ -161,7 +174,6 @@ card:before,
 }
 
 @keyframes holoGradient {
-
   0%,
   100% {
     opacity: 0;
@@ -196,7 +208,6 @@ card:before,
 }
 
 @keyframes holoCard {
-
   0%,
   10% {
     transform: rotate3d(0, 0, 0, -20deg);
@@ -210,7 +221,6 @@ card:before,
     transform: rotate3d(0, 0, 0, -20deg);
   }
 }
-
 
 /* ------- Fight Page Accept Button ------- */
 
