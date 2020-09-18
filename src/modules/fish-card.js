@@ -22,10 +22,9 @@ const FishCard = ({
       <img src={image} alt="fish pic" />
       <fieldset>
         <legend>Stats</legend>
-        <ul>
+        <dl>
           <li className="stats">
             {/* <span role="img" aria-label="">
-              
             </span>{" "} */}
             Danger: {Dangerous}{" "}
             {/* <span role="img" aria-label="">
@@ -43,7 +42,7 @@ const FishCard = ({
               ⚡
             </span> */}
           </li>
-        </ul>
+        </dl>
       </fieldset>
       <h3>Description:</h3>
       <p>{Comments}</p>
