@@ -28,7 +28,7 @@ body {
 /* ------- Home Accept Button ------- */
 
 .home__btn {
-  background: hsl(183, 90%, 37%);
+  background: hsl(183, 90%, 24%);
   display: block;
   margin-top: 50px;
   margin-left: auto;
@@ -37,17 +37,17 @@ body {
   padding: 20px;
   font-family: inherit;
   color: hsl(0, 0%, 100%);
-  box-shadow: inset -4px -4px 0px 0px hsl(183, 93%, 17%);
+  box-shadow: inset -4px -4px 0px 0px hsl(183, 95%, 7%);
 }
 
 .home__btn:hover,
 .home__btn:focus {
   background: hsl(183, 86%, 36%);
-  box-shadow: inset -6px -8px 0px 0px hsl(183, 93%, 17%);
+  box-shadow: inset -6px -8px 0px 0px hsl(183, 95%, 7%);
 }
 
 .home__btn:active {
-  box-shadow: inset 4px 4px 0px 0px hsl(183, 93%, 17%);
+  box-shadow: inset 4px 4px 0px 0px hsl(183, 95%, 7%);
 }
 
 .home__btn:before {
