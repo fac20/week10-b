@@ -16,19 +16,17 @@ const getRandomFishData = () => {
   const speciesCodeArr = [
     2,
     226,
-    2087,
-    4535,
-    4513,
-    6329,
-    57918,
-    7198,
-    5458,
-    25413,
-    22826,
-    4563,
     1353,
-    66829,
+    2087,
+    4513,
+    4535,
+    4563,
+    5458,
+    6329,
+    7198,
     7199,
+    22826,
+    25413,
   ];
   const randomArrayIndex = Math.floor(Math.random() * speciesCodeArr.length);
   const randSpeciesNo = speciesCodeArr[randomArrayIndex];

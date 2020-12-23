@@ -116,7 +116,7 @@ img {
   box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6),
     3px 3px 3px 0 rgba(#c995c3, 0.6), 0 0 6px 2px rgba(#d6c147, 0.6),
     0 35px 25px -15px rgba(0, 0, 0, 0.5);
-  animation: holoCard 10s ease infinite;
+  animation: holoCard 15s ease infinite;
 }
 
 card:before,
@@ -137,14 +137,14 @@ card:before,
   mix-blend-mode: color-dodge;
   opacity: 0.2;
   z-index: 1;
-  animation: holoGradient 10s ease infinite;
+  animation: holoGradient 15s ease infinite;
 }
 
 .card:after {
   mix-blend-mode: color-dodge;
   opacity: 1;
   z-index: 2;
-  animation: holoSparkle 10s ease infinite;
+  animation: holoSparkle 15s ease infinite;
 }
 
 .card.active:before {
@@ -167,66 +167,78 @@ card:before,
   animation: none;
 }
 
+/* TODO: Make overflow scroll work with pseudo-elements */
+.card__p--description {
+  max-height: 9rem;
+  overflow: auto;
+}
+
 @keyframes holoSparkle {
   0%,
-  5% {
+  3% {
     opacity: 0.1;
   }
 
-  20% {
+  10% {
     opacity: 1;
   }
 
-  100% {
+  15% {
     opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 @keyframes holoGradient {
   0%,
-  100% {
+  15% {
     opacity: 0;
     background-position: 0% 0%;
   }
 
-  8% {
+  1% {
     opacity: 0;
   }
 
-  10% {
+  3% {
     background-position: 0% 0%;
   }
 
-  19% {
+  9% {
     background-position: 100% 100%;
     opacity: 0.5;
   }
 
-  35% {
+  11% {
     background-position: 100% 100%;
   }
 
-  55% {
+  13% {
     background-position: 0% 0%;
     opacity: 0.3;
   }
 
-  75% {
+  14% {
+    opacity: 0;
+  }
+  100% {
     opacity: 0;
   }
 }
 
 @keyframes holoCard {
   0%,
-  10% {
+  3% {
     transform: rotate3d(0, 0, 0, -20deg);
   }
 
-  20% {
-    transform: rotate3d(1, 1, 0.2, 30deg);
+  10% {
+    transform: rotate3d(1, 1, 0.2, 20deg);
   }
 
-  100% {
+  15% {
     transform: rotate3d(0, 0, 0, -20deg);
   }
 }

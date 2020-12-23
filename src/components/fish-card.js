@@ -54,7 +54,10 @@ const FishCard = ({
         </dl>
       </fieldset>
       <h3>Description:</h3>
-      <p dangerouslySetInnerHTML={{ __html: Comments }} />
+      <p
+        className="card__p--description"
+        dangerouslySetInnerHTML={{ __html: Comments }}
+      />
     </article>
   );
 };
