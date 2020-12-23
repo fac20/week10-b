@@ -15,6 +15,11 @@ const getRandomFishData = () => {
   // generate random number between 1 and 34342
   const speciesCodeArr = [
     2,
+    226,
+    2087,
+    4535,
+    4513,
+    6329,
     57918,
     7198,
     5458,

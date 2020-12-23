@@ -3,6 +3,7 @@ import React from "react";
 const FishCard = ({
   Genus,
   Species,
+  FBname,
   Vulnerability,
   Length,
   Dangerous,
@@ -16,9 +17,10 @@ const FishCard = ({
   }
   return (
     <article className={hidden ? "hidden card" : "card"}>
-      <h2>
+      <h2>{FBname}</h2>
+      <h3>
         {Genus} {Species}
-      </h2>
+      </h3>
       <img src={image} alt="fish pic" />
       <fieldset>
         <legend>Stats</legend>
