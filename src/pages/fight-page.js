@@ -1,6 +1,6 @@
 import React from "react";
-import FishCard from "./fish-card";
-import { getRandomFishData } from "./fetch-helper";
+import FishCard from "../components/fish-card";
+import { getRandomFishData } from "../utils/fetch-helper";
 
 const FightPage = () => {
   const [fishData, setFishData] = React.useState(null);

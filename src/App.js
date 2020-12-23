@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import LandingPage from "./modules/landing-page";
-import FightPage from "./modules/fight-page";
+import LandingPage from "./pages/landing-page";
+import FightPage from "./pages/fight-page";
 
 function App() {
   const [page, setPage] = React.useState(true);
