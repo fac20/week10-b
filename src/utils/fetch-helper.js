@@ -15,15 +15,18 @@ const getRandomFishData = () => {
   // generate random number between 1 and 34342
   const speciesCodeArr = [
     2,
-    57918,
-    7198,
-    5458,
-    25413,
-    22826,
-    4563,
+    226,
     1353,
-    66829,
+    2087,
+    4513,
+    4535,
+    4563,
+    5458,
+    6329,
+    7198,
     7199,
+    22826,
+    25413,
   ];
   const randomArrayIndex = Math.floor(Math.random() * speciesCodeArr.length);
   const randSpeciesNo = speciesCodeArr[randomArrayIndex];
